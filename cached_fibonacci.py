@@ -1,7 +1,7 @@
 import time
 
 
-class tools:
+class Tools:
     def __init__(self):
         self.hash_table = dict()
         self.args = None
@@ -56,7 +56,7 @@ class tools:
         return wrapper
 
 
-cached = tools()
+cached = Tools()
 
 
 @cached.cacheFunc
