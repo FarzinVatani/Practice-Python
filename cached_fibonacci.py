@@ -56,10 +56,8 @@ class Tools:
         return wrapper
 
 
-cached = Tools()
 
-
-@cached.cacheFunc
+@Tools().cacheFunc
 def fib(n):
     if n == 1 or n == 2:
         return 1
@@ -67,8 +65,9 @@ def fib(n):
     return fib(n - 1) + fib(n - 2)
 
 
-start = time.time()
+if __name__ == "__main__":
+    start = time.time()
 
-result = fib(int(input("enter: ")))
-print(result)
-print(f"time: {time.time() - start}")
+    result = fib(int(input("enter: ")))
+    print(result)
+    print(f"time: {time.time() - start}")
